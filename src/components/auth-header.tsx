@@ -10,8 +10,8 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { Button } from "./ui/button";
 import { Github } from "lucide-react";
-import { signIn } from "@/app/actions/sign-in";
-import { signOut } from "@/app/actions/sign-out";
+import { signIn } from "@/actions/sign-in";
+import { signOut } from "@/actions/sign-out";
 
 const AuthHeader = () => {
   const session = useSession();
