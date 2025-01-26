@@ -11,14 +11,15 @@ const TopicShowPage: React.FC<TopicShowPageProps> = async ({ params }) => {
   const slug = (await params).slug;
 
   return (
-    <div className="grid grid-cols-4 gap-4 p-4">
-      <div className="col-span-3">
-        <h1 className="font-bold text-2xl mb-2">{slug}</h1>
-        <PostList fetchData = {() => fetchPostByTopicSlug(slug)}/>
-      </div>
-      <div>
+    <div className="flex flex-col gap-2 mt-10">
+      <div className="flex justify-between">
+        <h1 className="font-bold text-xl md:text-2xl">{slug}</h1>
          <PostCreateForm slug = {slug}/>
       </div>
+      <div className="col-span-3">
+        <PostList fetchData = {() => fetchPostByTopicSlug(slug)}/>
+      </div>
+      
     </div>
   );
 };

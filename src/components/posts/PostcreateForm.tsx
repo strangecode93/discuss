@@ -24,7 +24,7 @@ const PostCreateForm : React.FC<CreatePostFormProps> = ({slug}) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button>New a Post</Button>
+        <Button className="font-bold">New a Post</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <form action={action}>
